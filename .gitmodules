@@ -1,0 +1,3 @@
+[submodule "src/musicplayer"]
+    path = src/musicplayer
+    url = https://github.com/natidever/MusicPlayer-JavaFX-.git
