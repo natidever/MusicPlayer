@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="ParentAnchorPane" prefHeight="706.0" prefWidth="1471.0" styleClass="ParentAnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="musicplayer.newpackage.MPlayerFXMLController">
+   <children>
+      <VBox id="sidevbox" layoutX="-6.0" layoutY="6.0" minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="231.0" styleClass="sidevbox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-6.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="786.0" prefWidth="264.0" styleClass="sidebar" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="29.0" fitWidth="36.0" layoutX="26.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Search.png" />
+                     </image>
+                  </ImageView>
+                  <TextField id="searchfield" layoutX="55.0" layoutY="111.0" promptText="Search" />
+                  <ImageView fitHeight="36.0" fitWidth="38.0" layoutX="23.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-music-folder-48%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label id="sidebarlabel" layoutX="76.0" layoutY="171.0" prefHeight="17.0" prefWidth="60.0" styleClass="sidebarlabel" text="Folder" />
+                  <ImageView fitHeight="36.0" fitWidth="38.0" layoutX="23.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-singer-64.png" />
+                     </image>
+                  </ImageView>
+                  <Label id="sidebarlabel" layoutX="79.0" layoutY="227.0" prefHeight="17.0" prefWidth="60.0" styleClass="sidebarlabel" text="Artist" />
+                  <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="26.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-music-library-48%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label id="sidebarlabel" layoutX="79.0" layoutY="285.0" prefHeight="17.0" prefWidth="60.0" styleClass="sidebarlabel" text="Album" />
+                  <ImageView fitHeight="36.0" fitWidth="38.0" layoutX="26.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8-playlist-64.png" />
+                     </image>
+                  </ImageView>
+                  <Label id="sidebarlabel" fx:id="playList" layoutX="79.0" layoutY="342.0" prefHeight="17.0" prefWidth="83.0" styleClass="sidebarlabel" text="Add playlist" />
+                  <ScrollPane hbarPolicy="NEVER" layoutX="4.0" layoutY="381.0" prefHeight="362.0" prefWidth="291.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="257.0" layoutY="57.0" prefHeight="635.0" prefWidth="1139.0">
+         <children>
+            <VBox layoutX="77.0" maxHeight="10000.0" maxWidth="1156.0" prefHeight="643.0" prefWidth="1061.0">
+               <children>
+                  <Label prefHeight="45.0" prefWidth="176.0" text="Recently Played">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="27.0" prefWidth="100.0" text="All Songs">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="59.0" text="shuffle" />
+                  <ScrollPane id="allsongscrollpane" fx:id="music_list" fitToHeight="true" fitToWidth="true" hmax="0.0" maxHeight="1000.0" maxWidth="1132.0" minHeight="-Infinity" minWidth="100.0" prefHeight="422.0" prefWidth="1061.0" vmax="0.0" VBox.vgrow="ALWAYS">
+                     <content>
+                        <TableView fx:id="table" prefHeight="490.0" prefWidth="1001.0">
+                          <columns>
+                            <TableColumn prefWidth="252.0" text="Title" />
+                            <TableColumn prefWidth="250.0" text="Album" />
+                              <TableColumn prefWidth="280.0" text="Artist" />
+                              <TableColumn prefWidth="347.0" text="Duration" />
+                          </columns>
+                        </TableView>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="334.0" layoutY="686.0" prefHeight="112.0" prefWidth="1092.0" />
+      <AnchorPane layoutX="344.0" layoutY="696.0" prefHeight="112.0" prefWidth="1092.0">
+         <children>
+            <AnchorPane prefHeight="62.0" prefWidth="1124.0" styleClass="play-pause">
+               <children>
+                  <ImageView fx:id="playButton" fitHeight="36.0" fitWidth="60.0" layoutX="489.0" layoutY="16.0" onMousePressed="#play_pause" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../icons8-play-100.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="17.0" fitWidth="25.0" layoutX="561.0" layoutY="24.0" onMousePressed="#nextsong" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../next.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="420.0" layoutY="25.0" onMousePressed="#previoussong" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../previous.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="939.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../speaker-filled-audio-tool.png" />
+                     </image>
+                  </ImageView>
+                  <Slider layoutX="1017.0" layoutY="18.0" />
+                  <ImageView fitHeight="25.0" fitWidth="36.0" layoutX="686.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../loop.png" />
+                     </image>
+                  </ImageView>
+                  <ProgressBar layoutX="408.0" layoutY="64.0" prefHeight="8.0" prefWidth="291.0" progress="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

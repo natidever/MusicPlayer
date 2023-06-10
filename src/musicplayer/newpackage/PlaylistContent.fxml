@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="665.0" prefWidth="1188.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="musicplayer.newpackage.PlaylistContentController">
+   <children>
+      <ImageView fitHeight="181.0" fitWidth="168.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resource/playlist.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="20.0" layoutX="434.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resource/plus.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="488.0" layoutY="156.0" text="Add Music" />
+      <ImageView fitHeight="20.0" fitWidth="34.0" layoutX="960.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resource/delete.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="998.0" layoutY="155.0" text="Delete" />
+      <ImageView fitHeight="24.0" fitWidth="20.0" layoutX="737.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resource/rename.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="765.0" layoutY="157.0" text="rename" />
+      <ImageView fitHeight="24.0" fitWidth="20.0" layoutX="225.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resource/Play2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="263.0" layoutY="155.0" text="Play All" />
+      <Label fx:id="Playlist_Name" layoutX="191.0" layoutY="25.0" text="PlayList Name">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TableView fx:id="playlistTableView" layoutX="11.0" layoutY="248.0" prefHeight="373.0" prefWidth="1185.0">
+        <columns>
+          <TableColumn fx:id="titleColumn" prefWidth="274.0" text="Title" />
+          <TableColumn fx:id="albumColumn" prefWidth="287.0" text="Album" />
+            <TableColumn fx:id="artistColumn" prefWidth="279.0" text="Artist" />
+            <TableColumn fx:id="durationColumn" prefWidth="349.0" text="Duration" />
+        </columns>
+      </TableView>
+      <Label fx:id="EmptyPlaylist" layoutX="34.0" layoutY="211.0" prefHeight="17.0" prefWidth="439.0" text="Playlist without song is like swimming pool without water.Add some music" />
+   </children>
+</AnchorPane>

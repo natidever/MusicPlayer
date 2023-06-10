@@ -1,0 +1,20 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.table-row-cell{
+   -fx-cell-size:27px;
+-fx-font-family: 'Roboto', sans-serif;
+  -fx-font-size: 16px;
+}
+.play-pause{
+    -fx-background-color:bisque;
+   -fx-background-position: center;
+   -fx-background-size: cover;
+}
+.backgorund-for-playlist{
+   -fx-background-color:chocolate;
+   
+}
+.transparen{
+       -fx-background-color:aliceblue;
+       
+}
