@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fx:id="scrollPane" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: gray;" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ArtistsController">
+   <content>
+      <VBox fx:id="contentVBox" prefHeight="700.0" prefWidth="1200.0" style="-fx-padding: 0 0 100 0; -fx-background-color: gray;">
+         <GridPane fx:id="artistsGridPane" hgap="10.0" minHeight="900.0" minWidth="1200.0" prefHeight="900.0" prefWidth="1200.0" style="-fx-background-color: gray;" vgap="10.0">
+         </GridPane>
+      </VBox>
+   </content>
+</ScrollPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane fx:id="scroll" fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1200.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ArtistdetailController">
+   <content>
+      <VBox fx:id="vbox" prefHeight="1200.0" prefWidth="1200.0">
+         <children>
+            <TableView fx:id="musicTableView" prefHeight="659.0" prefWidth="864.0">
+              <columns>
+                <TableColumn fx:id="artistColumn" prefWidth="200.0" text="Artist" />
+                <TableColumn fx:id="albumColumn" prefWidth="200.0" text="Album" />
+                  <TableColumn fx:id="titleColumn" prefWidth="200.0" text="Title" />
+                  <TableColumn fx:id="durationColumn" prefWidth="100.0" text="Duration" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>
